@@ -80,6 +80,24 @@ jacocoTestReport {
     }
 }
 
+afterEvaluate {
+    jacocoTestReport {
+        classDirectories.setFrom(
+                files(classDirectories.files.collect {
+                    fileTree(dir: it, exclude: [
+
+                            '**/AlertManagementApplication.class',
+                            '**/configuration/**',
+                            '**/persistence/**',
+                            '**/presentation/dto/**',
+                            '**/presentation/advice/**'
+                    ])
+                })
+        )
+    }
+}
+
+
 
 
 sonar {
