@@ -90,7 +90,10 @@ afterEvaluate {
                             '**/configuration/**',
                             '**/persistence/**',
                             '**/presentation/dto/**',
-                            '**/presentation/advice/**'
+                            '**/presentation/advice/**',
+                            '**/service/exception/**'
+
+
                     ])
                 })
         )
